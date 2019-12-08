@@ -1,0 +1,14 @@
+<body>
+    {% for album_id, details in albums.items()%}
+    <div>
+        {{ details.name }}
+        <ul>
+            {% for track in details['tracks']['items'] %}
+            <li>
+                {{ track.name }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</body>
